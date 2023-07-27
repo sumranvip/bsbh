@@ -1,0 +1,400 @@
+[debug] [2023-07-27T04:22:24.438Z] ----------------------------------------------------------------------
+[debug] [2023-07-27T04:22:24.442Z] Command:       /usr/bin/node /usr/local/bin/firebase init
+[debug] [2023-07-27T04:22:24.443Z] CLI Version:   12.4.0
+[debug] [2023-07-27T04:22:24.444Z] Platform:      linux
+[debug] [2023-07-27T04:22:24.444Z] Node Version:  v18.13.0
+[debug] [2023-07-27T04:22:24.445Z] Time:          Thu Jul 27 2023 09:52:24 GMT+0530 (India Standard Time)
+[debug] [2023-07-27T04:22:24.445Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-27T04:22:24.450Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-07-27T04:22:24.532Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-27T04:22:24.533Z] > authorizing via signed-in user (sumranchahalempire@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/sumran/project-pup
+
+[debug] [2023-07-27T04:22:25.255Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-07-27T04:22:25.256Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-07-27T04:23:00.012Z] > refreshing access token with scopes: []
+[debug] [2023-07-27T04:23:00.029Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-07-27T04:23:00.031Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-07-27T04:23:00.409Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-07-27T04:23:00.410Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-07-27T04:23:01.454Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2023-07-27T04:23:01.454Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"sumranchahal","name":"sumranchahal"}
+[debug] [2023-07-27T04:23:03.998Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2023-07-27T04:23:03.999Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.7450825561684191230"}
+[debug] [2023-07-27T04:23:04.011Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7450825561684191230 [none]
+[debug] [2023-07-27T04:23:05.604Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7450825561684191230 200
+[debug] [2023-07-27T04:23:05.605Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7450825561684191230 {"name":"operations/cp.7450825561684191230"}
+[debug] [2023-07-27T04:23:06.109Z] [Project Creation Poller] Retrying task index 0
+[debug] [2023-07-27T04:23:06.112Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7450825561684191230 [none]
+[debug] [2023-07-27T04:23:07.723Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7450825561684191230 200
+[debug] [2023-07-27T04:23:07.724Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7450825561684191230 {"name":"operations/cp.7450825561684191230","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"699821241847","projectId":"sumranchahal","lifecycleState":"ACTIVE","name":"sumranchahal","createTime":"2023-07-27T04:23:02.144Z"}}
+[debug] [2023-07-27T04:23:07.733Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/sumranchahal:addFirebase [none]
+[debug] [2023-07-27T04:23:11.461Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/sumranchahal:addFirebase 200
+[debug] [2023-07-27T04:23:11.462Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/sumranchahal:addFirebase {"name":"operations/workflows/NmVmNDY4YjItOGM1YS00NDM2LTljODItODYwOTI2NDBmZGE0"}
+[debug] [2023-07-27T04:23:11.466Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmVmNDY4YjItOGM1YS00NDM2LTljODItODYwOTI2NDBmZGE0 [none]
+[debug] [2023-07-27T04:23:12.913Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmVmNDY4YjItOGM1YS00NDM2LTljODItODYwOTI2NDBmZGE0 200
+[debug] [2023-07-27T04:23:12.914Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmVmNDY4YjItOGM1YS00NDM2LTljODItODYwOTI2NDBmZGE0 {"name":"operations/workflows/NmVmNDY4YjItOGM1YS00NDM2LTljODItODYwOTI2NDBmZGE0"}
+[debug] [2023-07-27T04:23:13.417Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-07-27T04:23:13.419Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmVmNDY4YjItOGM1YS00NDM2LTljODItODYwOTI2NDBmZGE0 [none]
+[debug] [2023-07-27T04:23:14.622Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmVmNDY4YjItOGM1YS00NDM2LTljODItODYwOTI2NDBmZGE0 200
+[debug] [2023-07-27T04:23:14.622Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmVmNDY4YjItOGM1YS00NDM2LTljODItODYwOTI2NDBmZGE0 {"name":"operations/workflows/NmVmNDY4YjItOGM1YS00NDM2LTljODItODYwOTI2NDBmZGE0"}
+[debug] [2023-07-27T04:23:15.624Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-07-27T04:23:15.626Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmVmNDY4YjItOGM1YS00NDM2LTljODItODYwOTI2NDBmZGE0 [none]
+[debug] [2023-07-27T04:23:17.110Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmVmNDY4YjItOGM1YS00NDM2LTljODItODYwOTI2NDBmZGE0 200
+[debug] [2023-07-27T04:23:17.111Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmVmNDY4YjItOGM1YS00NDM2LTljODItODYwOTI2NDBmZGE0 {"name":"operations/workflows/NmVmNDY4YjItOGM1YS00NDM2LTljODItODYwOTI2NDBmZGE0"}
+[debug] [2023-07-27T04:23:19.112Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-07-27T04:23:19.114Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmVmNDY4YjItOGM1YS00NDM2LTljODItODYwOTI2NDBmZGE0 [none]
+[debug] [2023-07-27T04:23:20.089Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmVmNDY4YjItOGM1YS00NDM2LTljODItODYwOTI2NDBmZGE0 200
+[debug] [2023-07-27T04:23:20.089Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmVmNDY4YjItOGM1YS00NDM2LTljODItODYwOTI2NDBmZGE0 {"name":"operations/workflows/NmVmNDY4YjItOGM1YS00NDM2LTljODItODYwOTI2NDBmZGE0"}
+[debug] [2023-07-27T04:23:24.091Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-07-27T04:23:24.095Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmVmNDY4YjItOGM1YS00NDM2LTljODItODYwOTI2NDBmZGE0 [none]
+[debug] [2023-07-27T04:23:25.427Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmVmNDY4YjItOGM1YS00NDM2LTljODItODYwOTI2NDBmZGE0 200
+[debug] [2023-07-27T04:23:25.427Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NmVmNDY4YjItOGM1YS00NDM2LTljODItODYwOTI2NDBmZGE0 {"name":"operations/workflows/NmVmNDY4YjItOGM1YS00NDM2LTljODItODYwOTI2NDBmZGE0","done":true,"response":{"@type":"type.googleapis.com/google.firebase.service.v1beta1.FirebaseProject","projectId":"sumranchahal","projectNumber":"699821241847","displayName":"sumranchahal","name":"projects/sumranchahal","resources":{"hostingSite":"sumranchahal"}}}
+[info] 
+[info] 🎉🎉🎉 Your Firebase project is ready! 🎉🎉🎉
+[info] 
+[info] Project information:
+[info]    - Project ID: sumranchahal
+[info]    - Project Name: sumranchahal
+[info] 
+[info] Firebase console is available at
+[info] https://console.firebase.google.com/project/sumranchahal/overview
+[info] i  Using project sumranchahal (sumranchahal) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2023-07-27T04:23:55.096Z] Error: ENOTDIR: not a directory, scandir '/home/sumran/project-pup/home.html'
+    at Object.readdirSync (node:fs:1451:3)
+    at Object.createFileSync (/usr/local/lib/node_modules/firebase-tools/node_modules/fs-extra/lib/ensure/file.js:55:10)
+    at Config.writeProjectFile (/usr/local/lib/node_modules/firebase-tools/lib/config.js:152:12)
+    at /usr/local/lib/node_modules/firebase-tools/lib/config.js:176:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async doSetup (/usr/local/lib/node_modules/firebase-tools/lib/init/features/hosting/index.js:141:13)
+    at async init (/usr/local/lib/node_modules/firebase-tools/lib/init/index.js:37:9)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-07-27T06:02:30.778Z] ----------------------------------------------------------------------
+[debug] [2023-07-27T06:02:30.786Z] Command:       /usr/bin/node /usr/local/bin/firebase init hosting
+[debug] [2023-07-27T06:02:30.788Z] CLI Version:   12.4.0
+[debug] [2023-07-27T06:02:30.789Z] Platform:      linux
+[debug] [2023-07-27T06:02:30.789Z] Node Version:  v18.13.0
+[debug] [2023-07-27T06:02:30.798Z] Time:          Thu Jul 27 2023 11:32:30 GMT+0530 (India Standard Time)
+[debug] [2023-07-27T06:02:30.799Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-27T06:02:30.826Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-27T06:02:30.828Z] > authorizing via signed-in user (sumranchahalempire@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/sumran/project-pup
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-07-27T06:03:10.895Z] > refreshing access token with scopes: []
+[debug] [2023-07-27T06:03:10.909Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-07-27T06:03:10.910Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-07-27T06:03:11.379Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-07-27T06:03:11.379Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-07-27T06:03:11.462Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2023-07-27T06:03:11.464Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"sumranpup","name":"sumranpup"}
+[debug] [2023-07-27T06:03:13.370Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2023-07-27T06:03:13.372Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.5233460850192726457"}
+[debug] [2023-07-27T06:03:13.378Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5233460850192726457 [none]
+[debug] [2023-07-27T06:03:14.925Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5233460850192726457 200
+[debug] [2023-07-27T06:03:14.926Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5233460850192726457 {"name":"operations/cp.5233460850192726457"}
+[debug] [2023-07-27T06:03:15.429Z] [Project Creation Poller] Retrying task index 0
+[debug] [2023-07-27T06:03:15.432Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5233460850192726457 [none]
+[debug] [2023-07-27T06:03:17.085Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5233460850192726457 200
+[debug] [2023-07-27T06:03:17.087Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5233460850192726457 {"name":"operations/cp.5233460850192726457","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"1029251152901","projectId":"sumranpup","lifecycleState":"ACTIVE","name":"sumranpup","createTime":"2023-07-27T06:03:12.459Z"}}
+[debug] [2023-07-27T06:03:17.103Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/sumranpup:addFirebase [none]
+[debug] [2023-07-27T06:03:20.896Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/sumranpup:addFirebase 200
+[debug] [2023-07-27T06:03:20.903Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/sumranpup:addFirebase {"name":"operations/workflows/Nzg2MjJhNzAtOTJmNS00MmI1LTg1N2EtMjJkOGJhZTRmYTMx"}
+[debug] [2023-07-27T06:03:20.908Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Nzg2MjJhNzAtOTJmNS00MmI1LTg1N2EtMjJkOGJhZTRmYTMx [none]
+[debug] [2023-07-27T06:03:21.986Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Nzg2MjJhNzAtOTJmNS00MmI1LTg1N2EtMjJkOGJhZTRmYTMx 200
+[debug] [2023-07-27T06:03:21.986Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Nzg2MjJhNzAtOTJmNS00MmI1LTg1N2EtMjJkOGJhZTRmYTMx {"name":"operations/workflows/Nzg2MjJhNzAtOTJmNS00MmI1LTg1N2EtMjJkOGJhZTRmYTMx"}
+[debug] [2023-07-27T06:03:22.488Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-07-27T06:03:22.490Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Nzg2MjJhNzAtOTJmNS00MmI1LTg1N2EtMjJkOGJhZTRmYTMx [none]
+[debug] [2023-07-27T06:03:23.464Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Nzg2MjJhNzAtOTJmNS00MmI1LTg1N2EtMjJkOGJhZTRmYTMx 200
+[debug] [2023-07-27T06:03:23.465Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Nzg2MjJhNzAtOTJmNS00MmI1LTg1N2EtMjJkOGJhZTRmYTMx {"name":"operations/workflows/Nzg2MjJhNzAtOTJmNS00MmI1LTg1N2EtMjJkOGJhZTRmYTMx"}
+[debug] [2023-07-27T06:03:24.465Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-07-27T06:03:24.467Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Nzg2MjJhNzAtOTJmNS00MmI1LTg1N2EtMjJkOGJhZTRmYTMx [none]
+[debug] [2023-07-27T06:03:25.471Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Nzg2MjJhNzAtOTJmNS00MmI1LTg1N2EtMjJkOGJhZTRmYTMx 200
+[debug] [2023-07-27T06:03:25.471Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Nzg2MjJhNzAtOTJmNS00MmI1LTg1N2EtMjJkOGJhZTRmYTMx {"name":"operations/workflows/Nzg2MjJhNzAtOTJmNS00MmI1LTg1N2EtMjJkOGJhZTRmYTMx"}
+[debug] [2023-07-27T06:03:27.472Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-07-27T06:03:27.474Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Nzg2MjJhNzAtOTJmNS00MmI1LTg1N2EtMjJkOGJhZTRmYTMx [none]
+[debug] [2023-07-27T06:03:28.700Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Nzg2MjJhNzAtOTJmNS00MmI1LTg1N2EtMjJkOGJhZTRmYTMx 200
+[debug] [2023-07-27T06:03:28.701Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Nzg2MjJhNzAtOTJmNS00MmI1LTg1N2EtMjJkOGJhZTRmYTMx {"name":"operations/workflows/Nzg2MjJhNzAtOTJmNS00MmI1LTg1N2EtMjJkOGJhZTRmYTMx"}
+[debug] [2023-07-27T06:03:32.708Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-07-27T06:03:32.709Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Nzg2MjJhNzAtOTJmNS00MmI1LTg1N2EtMjJkOGJhZTRmYTMx [none]
+[debug] [2023-07-27T06:03:33.593Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Nzg2MjJhNzAtOTJmNS00MmI1LTg1N2EtMjJkOGJhZTRmYTMx 200
+[debug] [2023-07-27T06:03:33.595Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/Nzg2MjJhNzAtOTJmNS00MmI1LTg1N2EtMjJkOGJhZTRmYTMx {"name":"operations/workflows/Nzg2MjJhNzAtOTJmNS00MmI1LTg1N2EtMjJkOGJhZTRmYTMx","done":true,"response":{"@type":"type.googleapis.com/google.firebase.service.v1beta1.FirebaseProject","projectId":"sumranpup","projectNumber":"1029251152901","displayName":"sumranpup","name":"projects/sumranpup","resources":{"hostingSite":"sumranpup"}}}
+[info] 
+[info] 🎉🎉🎉 Your Firebase project is ready! 🎉🎉🎉
+[info] 
+[info] Project information:
+[info]    - Project ID: sumranpup
+[info]    - Project Name: sumranpup
+[info] 
+[info] Firebase console is available at
+[info] https://console.firebase.google.com/project/sumranpup/overview
+[info] i  Using project sumranpup (sumranpup) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2023-07-27T06:04:20.449Z] Error: ENOTDIR: not a directory, scandir '/home/sumran/project-pup/index.html'
+    at Object.readdirSync (node:fs:1451:3)
+    at Object.createFileSync (/usr/local/lib/node_modules/firebase-tools/node_modules/fs-extra/lib/ensure/file.js:55:10)
+    at Config.writeProjectFile (/usr/local/lib/node_modules/firebase-tools/lib/config.js:152:12)
+    at /usr/local/lib/node_modules/firebase-tools/lib/config.js:176:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async doSetup (/usr/local/lib/node_modules/firebase-tools/lib/init/features/hosting/index.js:141:13)
+    at async init (/usr/local/lib/node_modules/firebase-tools/lib/init/index.js:37:9)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-07-27T06:04:29.136Z] ----------------------------------------------------------------------
+[debug] [2023-07-27T06:04:29.141Z] Command:       /usr/bin/node /usr/local/bin/firebase init hosting
+[debug] [2023-07-27T06:04:29.144Z] CLI Version:   12.4.0
+[debug] [2023-07-27T06:04:29.145Z] Platform:      linux
+[debug] [2023-07-27T06:04:29.146Z] Node Version:  v18.13.0
+[debug] [2023-07-27T06:04:29.146Z] Time:          Thu Jul 27 2023 11:34:29 GMT+0530 (India Standard Time)
+[debug] [2023-07-27T06:04:29.147Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-27T06:04:29.164Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-27T06:04:29.165Z] > authorizing via signed-in user (sumranchahalempire@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/sumran/project-pup
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-07-27T06:04:45.884Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2023-07-27T06:04:45.885Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"sumranpup","name":"sumranpup"}
+[debug] [2023-07-27T06:04:47.523Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 409
+[debug] [2023-07-27T06:04:47.524Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2023-07-27T06:04:47.786Z] FirebaseError: HTTP Error: 409, Requested entity already exists
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:288:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID sumranpup. Please try again with a unique project ID.
+[debug] [2023-07-27T06:04:57.064Z] ----------------------------------------------------------------------
+[debug] [2023-07-27T06:04:57.068Z] Command:       /usr/bin/node /usr/local/bin/firebase init hosting
+[debug] [2023-07-27T06:04:57.070Z] CLI Version:   12.4.0
+[debug] [2023-07-27T06:04:57.071Z] Platform:      linux
+[debug] [2023-07-27T06:04:57.071Z] Node Version:  v18.13.0
+[debug] [2023-07-27T06:04:57.072Z] Time:          Thu Jul 27 2023 11:34:57 GMT+0530 (India Standard Time)
+[debug] [2023-07-27T06:04:57.073Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-27T06:04:57.091Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-27T06:04:57.093Z] > authorizing via signed-in user (sumranchahalempire@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/sumran/project-pup
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-07-27T06:05:12.347Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2023-07-27T06:05:12.353Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"sumranpupp","name":"sumranpupp"}
+[debug] [2023-07-27T06:05:14.468Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2023-07-27T06:05:14.468Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.5729970373988096044"}
+[debug] [2023-07-27T06:05:14.475Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5729970373988096044 [none]
+[debug] [2023-07-27T06:05:16.104Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5729970373988096044 200
+[debug] [2023-07-27T06:05:16.111Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5729970373988096044 {"name":"operations/cp.5729970373988096044","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true}}
+[debug] [2023-07-27T06:05:16.613Z] [Project Creation Poller] Retrying task index 0
+[debug] [2023-07-27T06:05:16.616Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5729970373988096044 [none]
+[debug] [2023-07-27T06:05:18.326Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5729970373988096044 200
+[debug] [2023-07-27T06:05:18.328Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5729970373988096044 {"name":"operations/cp.5729970373988096044","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"807251799091","projectId":"sumranpupp","lifecycleState":"ACTIVE","name":"sumranpupp","createTime":"2023-07-27T06:05:13.014Z"}}
+[debug] [2023-07-27T06:05:18.339Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/sumranpupp:addFirebase [none]
+[debug] [2023-07-27T06:05:20.943Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/sumranpupp:addFirebase 200
+[debug] [2023-07-27T06:05:20.945Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/sumranpupp:addFirebase {"name":"operations/workflows/ZjA3YzJkMTAtOTE0NS00ZTY0LThhZWUtMTFkY2RlMWIzZjE5"}
+[debug] [2023-07-27T06:05:20.947Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZjA3YzJkMTAtOTE0NS00ZTY0LThhZWUtMTFkY2RlMWIzZjE5 [none]
+[debug] [2023-07-27T06:05:21.683Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZjA3YzJkMTAtOTE0NS00ZTY0LThhZWUtMTFkY2RlMWIzZjE5 200
+[debug] [2023-07-27T06:05:21.684Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZjA3YzJkMTAtOTE0NS00ZTY0LThhZWUtMTFkY2RlMWIzZjE5 {"name":"operations/workflows/ZjA3YzJkMTAtOTE0NS00ZTY0LThhZWUtMTFkY2RlMWIzZjE5"}
+[debug] [2023-07-27T06:05:22.185Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-07-27T06:05:22.186Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZjA3YzJkMTAtOTE0NS00ZTY0LThhZWUtMTFkY2RlMWIzZjE5 [none]
+[debug] [2023-07-27T06:05:22.885Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZjA3YzJkMTAtOTE0NS00ZTY0LThhZWUtMTFkY2RlMWIzZjE5 200
+[debug] [2023-07-27T06:05:22.886Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZjA3YzJkMTAtOTE0NS00ZTY0LThhZWUtMTFkY2RlMWIzZjE5 {"name":"operations/workflows/ZjA3YzJkMTAtOTE0NS00ZTY0LThhZWUtMTFkY2RlMWIzZjE5"}
+[debug] [2023-07-27T06:05:23.886Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-07-27T06:05:23.888Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZjA3YzJkMTAtOTE0NS00ZTY0LThhZWUtMTFkY2RlMWIzZjE5 [none]
+[debug] [2023-07-27T06:05:24.624Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZjA3YzJkMTAtOTE0NS00ZTY0LThhZWUtMTFkY2RlMWIzZjE5 200
+[debug] [2023-07-27T06:05:24.625Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZjA3YzJkMTAtOTE0NS00ZTY0LThhZWUtMTFkY2RlMWIzZjE5 {"name":"operations/workflows/ZjA3YzJkMTAtOTE0NS00ZTY0LThhZWUtMTFkY2RlMWIzZjE5"}
+[debug] [2023-07-27T06:05:26.628Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-07-27T06:05:26.629Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZjA3YzJkMTAtOTE0NS00ZTY0LThhZWUtMTFkY2RlMWIzZjE5 [none]
+[debug] [2023-07-27T06:05:27.301Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZjA3YzJkMTAtOTE0NS00ZTY0LThhZWUtMTFkY2RlMWIzZjE5 200
+[debug] [2023-07-27T06:05:27.302Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZjA3YzJkMTAtOTE0NS00ZTY0LThhZWUtMTFkY2RlMWIzZjE5 {"name":"operations/workflows/ZjA3YzJkMTAtOTE0NS00ZTY0LThhZWUtMTFkY2RlMWIzZjE5"}
+[debug] [2023-07-27T06:05:31.304Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-07-27T06:05:31.306Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZjA3YzJkMTAtOTE0NS00ZTY0LThhZWUtMTFkY2RlMWIzZjE5 [none]
+[debug] [2023-07-27T06:05:32.404Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZjA3YzJkMTAtOTE0NS00ZTY0LThhZWUtMTFkY2RlMWIzZjE5 200
+[debug] [2023-07-27T06:05:32.410Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZjA3YzJkMTAtOTE0NS00ZTY0LThhZWUtMTFkY2RlMWIzZjE5 {"name":"operations/workflows/ZjA3YzJkMTAtOTE0NS00ZTY0LThhZWUtMTFkY2RlMWIzZjE5","done":true,"response":{"@type":"type.googleapis.com/google.firebase.service.v1beta1.FirebaseProject","projectId":"sumranpupp","projectNumber":"807251799091","displayName":"sumranpupp","name":"projects/sumranpupp","resources":{"hostingSite":"sumranpupp"}}}
+[info] 
+[info] 🎉🎉🎉 Your Firebase project is ready! 🎉🎉🎉
+[info] 
+[info] Project information:
+[info]    - Project ID: sumranpupp
+[info]    - Project Name: sumranpupp
+[info] 
+[info] Firebase console is available at
+[info] https://console.firebase.google.com/project/sumranpupp/overview
+[info] i  Using project sumranpupp (sumranpupp) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2023-07-27T06:05:49.818Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2023-07-27T06:05:50.075Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2023-07-27T06:05:50.075Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"10.1.0","browserURL":"https://www.gstatic.com/firebasejs/10.1.0/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/10.1.0/firebase.tgz"},"live":{"version":"10.1","browserURL":"https://www.gstatic.com/firebasejs/live/10.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/10.1/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/10.1.0/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/10.1.0/firebase-auth/cordova.js","functions":"https://www.gstatic.com/firebasejs/10.1.0/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/10.1.0/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/10.1.0/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/10.1.0/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/10.1.0/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/10.1.0/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/10.1.0/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.memory.js"}}
+[debug] [2023-07-27T06:05:50.357Z] Error: ENOTDIR: not a directory, scandir '/home/sumran/project-pup/index.html'
+    at Object.readdirSync (node:fs:1451:3)
+    at Object.createFileSync (/usr/local/lib/node_modules/firebase-tools/node_modules/fs-extra/lib/ensure/file.js:55:10)
+    at Config.writeProjectFile (/usr/local/lib/node_modules/firebase-tools/lib/config.js:152:12)
+    at /usr/local/lib/node_modules/firebase-tools/lib/config.js:176:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async doSetup (/usr/local/lib/node_modules/firebase-tools/lib/init/features/hosting/index.js:145:9)
+    at async init (/usr/local/lib/node_modules/firebase-tools/lib/init/index.js:37:9)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-07-27T06:05:57.711Z] ----------------------------------------------------------------------
+[debug] [2023-07-27T06:05:57.718Z] Command:       /usr/bin/node /usr/local/bin/firebase init hosting
+[debug] [2023-07-27T06:05:57.720Z] CLI Version:   12.4.0
+[debug] [2023-07-27T06:05:57.721Z] Platform:      linux
+[debug] [2023-07-27T06:05:57.722Z] Node Version:  v18.13.0
+[debug] [2023-07-27T06:05:57.723Z] Time:          Thu Jul 27 2023 11:35:57 GMT+0530 (India Standard Time)
+[debug] [2023-07-27T06:05:57.723Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-27T06:05:57.745Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-27T06:05:57.747Z] > authorizing via signed-in user (sumranchahalempire@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/sumran/project-pup
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-07-27T06:06:07.090Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2023-07-27T06:06:07.092Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"pup","name":"pup"}
+[debug] [2023-07-27T06:06:08.662Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
+[debug] [2023-07-27T06:06:08.663Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"Request contains an invalid argument.","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id must be at least 6 characters long"},{"field":"display_name","description":"project display name must be at least 4 characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2023-07-27T06:06:08.947Z] FirebaseError: HTTP Error: 400, Request contains an invalid argument.
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:288:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2023-07-27T06:06:24.469Z] ----------------------------------------------------------------------
+[debug] [2023-07-27T06:06:24.476Z] Command:       /usr/bin/node /usr/local/bin/firebase init hosting
+[debug] [2023-07-27T06:06:24.477Z] CLI Version:   12.4.0
+[debug] [2023-07-27T06:06:24.477Z] Platform:      linux
+[debug] [2023-07-27T06:06:24.478Z] Node Version:  v18.13.0
+[debug] [2023-07-27T06:06:24.479Z] Time:          Thu Jul 27 2023 11:36:24 GMT+0530 (India Standard Time)
+[debug] [2023-07-27T06:06:24.479Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-27T06:06:24.495Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-27T06:06:24.496Z] > authorizing via signed-in user (sumranchahalempire@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/sumran/project-pup
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-07-27T06:06:36.770Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2023-07-27T06:06:36.774Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"new","name":"new"}
+[debug] [2023-07-27T06:06:38.371Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
+[debug] [2023-07-27T06:06:38.371Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"Request contains an invalid argument.","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id must be at least 6 characters long"},{"field":"display_name","description":"project display name must be at least 4 characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2023-07-27T06:06:38.635Z] FirebaseError: HTTP Error: 400, Request contains an invalid argument.
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:288:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
